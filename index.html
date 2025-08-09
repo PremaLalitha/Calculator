@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Calculator</title>
+<style>
+    body {
+        font-family: Times New Roman;
+        background: #f5f5f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    
+    .calculator {
+        background: white;
+        padding: 22px;
+        border-radius: 12px;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        width: 280px;
+    }
+    
+    .display {
+        width: 100%;
+        height: 60px;
+        background: #fafafa;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        text-align: right;
+        font-size: 24px;
+        padding: 5px;
+        margin-bottom: 16px;
+        color: #333;
+    }
+    
+    .buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+    }
+    
+    button {
+        height: 50px;
+        border: none;
+        border-radius: 8px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.1s;
+        background: #f8f8f8;
+        color: #333;
+    }
+    
+    button:hover {
+        background: #e8e8e8;
+    }
+    
+    button:active {
+        background: #d8d8d8;
+    }
+    
+    .operator {
+        background: #007aff;
+        color: white;
+    }
+    
+    .operator:hover {
+        background: #0056cc;
+    }
+    
+    .equal {
+        background: #34c759;
+        color: white;
+        grid-row: span 2;
+    }
+    
+    .equal:hover {
+        background: #28a745;
+    }
+    
+    .clear {
+        background: #ff3b30;
+        color: white;
+    }
+    
+    .clear:hover {
+        background: #d70015;
+    }
+    
+    .zero {
+        grid-column: span 2;
+    }
+</style>
+</head>
+<body>
+<div class="calculator">
+    <input type="text" class="display" id="display" disabled>
+    <div class="buttons">
+        <button class="clear" onclick="clearDisplay()">C</button>
+        <button class="operator" onclick="deleteLast()">⌫</button>
+        <button class="operator" onclick="appendToDisplay('/')">/</button>
+        <button class="operator" onclick="appendToDisplay('*')">×</button>
+        
+        <button onclick="appendToDisplay('7')">7</button>
+        <button onclick="appendToDisplay('8')">8</button>
+        <button onclick="appendToDisplay('9')">9</button>
+        <button class="operator" onclick="appendToDisplay('-')">-</button>
+        
+        <button onclick="appendToDisplay('4')">4</button>
+        <button onclick="appendToDisplay('5')">5</button>
+        <button onclick="appendToDisplay('6')">6</button>
+        <button class="operator" onclick="appendToDisplay('+')">+</button>
+        
+        <button onclick="appendToDisplay('1')">1</button>
+        <button onclick="appendToDisplay('2')">2</button>
+        <button onclick="appendToDisplay('3')">3</button>
+        <button class="equal" onclick="calculateResult()">=</button>
+        
+        <button class="zero" onclick="appendToDisplay('0')">0</button>
+        <button onclick="appendToDisplay('.')">.</button>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

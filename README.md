@@ -19,7 +19,7 @@ Application gets deployed and runs in browser/server.
 
 ## Pipeline Stages
 
--Start
+Start
 -Clone Repository
 -Build Docker Image
 -Stop Old Container

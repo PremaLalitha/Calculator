@@ -19,12 +19,12 @@ Application gets deployed and runs in browser/server.
 
 ## Pipeline Stages
 
-Start
-Clone Repository
-Build Docker Image
-Stop Old Container
-Run New Container
-End
+-Start
+-Clone Repository
+-Build Docker Image
+-Stop Old Container
+-Run New Container
+-End
 
 ## Flow
 GitHub → Jenkins Pipeline → Docker → Deployment
